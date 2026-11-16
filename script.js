@@ -72,7 +72,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Reveal on scroll for elements with .reveal
+  const revealGroups = [
+    '#about .about-layout > *',
+    '#projects .projects-heading',
+    '#projects .project-filters',
+    '#education .journey-panel-heading',
+    '#education .journey-card',
+    '#education .certificate-card',
+    '#skills .skills-title',
+    '#skills .skills-grid > *',
+    '#blog .blog-heading',
+    '#blog .blog-more-link',
+    '#video .video-showcase-heading',
+    '#video .video-item',
+    '#contact .container > *'
+  ];
+
+  revealGroups.forEach((selector) => {
+    document.querySelectorAll(selector).forEach((element, index) => {
+      element.classList.add('reveal');
+      element.style.setProperty('--reveal-delay', `${Math.min(index, 3) * 90}ms`);
+    });
+  });
+
+  // Reveal section content as it enters the viewport.
   const revealables = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && revealables.length) {
     const io = new IntersectionObserver((entries) => {
@@ -144,140 +167,130 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// --- Simple i18n (English / Myanmar) ---
-const translations = {
-  en: {
-    name: 'Myo Kyaw Thu',
-    nav_home: 'Home',
-    nav_about: 'About',
-    nav_projects: 'Projects',
-    nav_education: 'Education',
-    nav_certificates: 'Certificates',
-    nav_blog: 'Blog',
-    nav_video: 'Video',
-    nav_contact: 'Contact',
-    profile_label: 'Profile:',
-    education_label: 'Education:',
-    other_skill_label: 'Other Skill:',
-    address_label: 'Address:',
-    about_heading: 'About Me',
-    about_paragraph: 'Hello, I am currently a Final-year student majoring in Computer Science. I am excited about applying my skills in a junior developer role.This opportunity would allow me to further develop my capabilities, I am eager to make valuable contributions as a junior developer.',
-    projects_heading: 'Projects',
-    open_demo: 'Open Demo',
-    more_projects: 'More Projects',
-  download_cv: 'Download CV',
-    education_heading: 'Education',
-    certificates_heading: 'Certificates',
-    certificates_empty: 'Add certificate-1.jpg to the image folder.',
-    certificate_story_heading: 'How I Earned This Certificate',
-    certificate_story_prompt: 'I participated in a project competition organized by the University of Computer Studies, Meiktila, where I served as the team leader. Through developing a mobile application, I not only gained practical technical experience but also learned valuable skills in teamwork, leadership, and problem-solving',
-    skills_heading: 'Skills',
-    blog_heading: 'Blog',
-    blog_p: 'Click the button below to go to the blog',
-   
-    video_heading: 'Video',
-    contact_heading: 'Contact',
-    contact_paragraph: 'Click the button below to provide contact information',
-    contact_button: 'Click Here',
-    footer_text: 'My Portfolio | Created by'
-  },
-  mm: {
-    nav_home: 'မူလစာမျက်နှာ',
-    nav_about: 'အကြောင်း',
-    nav_projects: 'ပရောဂျက်များ',
-    nav_education: 'ပညာရေး',
-    nav_certificates: 'အောင်လက်မှတ်များ',
-    nav_blog: 'ဘလော့ဂ်',
-    nav_video: 'ဗီဒီယို',
-    nav_contact: 'ဆက်သွယ်ရန်',
-    profile_label: 'ကိုယ်ရေးအကျဥ်း:',
-    education_label: 'ပညာရေး:',
-    other_skill_label: 'အခြားကျွမ်းကျင်မှုများ:',
-    address_label: 'လိပ်စာ:',
-    name: 'မျိုးကျော်သူ',
-    about_heading: 'ကျွန်ုပ်အကြောင်း',
-    about_paragraph: 'မင်္ဂလာပါ၊ ကျွန်ုတော်သည် ကွန်ပျူတာသိပ္ပံကို အဓိကထား၍ ပညာသင်ယူနေသော တက္ကသိုလ်ကျောင်းသားတစ်ဦးဖြစ်သည်။ ကျောင်းမှာအဖွဲ့အစည်းများနှင့်အလုပ်တွဲလုပ်ရာတွင်စိတ်ပါဝင်စားစွာတွဲလုပ်ပါသည်။ တိုးတက်နေသောနည်းပညာများကိုလဲလေ့လာနေပါသည်',
-    projects_heading: 'ပရောဂျက်များ',
-    open_demo: 'နမူနာ ဖွင့်ရန်',
-    more_projects: 'ပရောဂျက်များ ပိုမိုကြည့်ရန်',
-  download_cv: 'CV ယူရန်',
-    education_heading: 'ပညာရေး',
-    certificates_heading: 'အောင်လက်မှတ်များ',
-    certificates_empty: 'certificate-1.jpg ပုံကို image folder ထဲသို့ ထည့်ပါ။',
-    certificate_story_heading: 'ဒီအောင်လက်မှတ်ကို ဘယ်လိုရရှိခဲ့သလဲ',
-    certificate_story_prompt: 'ကွန်ပျူတာတက္ကသိုလ်(မိတ္ထီလာ)Projectပြပွဲ/ပြိုင်ပွဲကျင်းပခဲ့ပါတယ်,ကျွန်တော်leaderအနေနဲ့ပါဝင်ခဲ့ပါပြီးmobileappတစ်ခုကိုဖန်တီးခဲ့ရုံတင်မကပဲ teamwok,leadership,Problem-Solving Skill တွေကိုလက်တွေ့ကြကြသင်ယူနိင်ခဲ့ပါတယ်',
-    skills_heading: 'ကျွမ်းကျင်မှုများ',
-    blog_heading: 'ဘလော့ဂ်',
-    blog_p: 'ဘလော့ဂ်သိုသွားရန် အောက်ပါbuttonကို နှိပ်ပါ။',
-    blog_coming: 'မကြာခင်တွင် ရနိုင်ပါပြီ။',
-    video_heading: 'ဗီဒီယို',
-    contact_heading: 'ဆက်သွယ်ရန်',
-    contact_paragraph: 'ကျွန်တော်ကိုအကြံပြုစာပေးပို့ရန် အတွက်အောက်ကbutton ကိုနိပ်ပေးပါ',
-    contact_button: 'စာပို့ရန် နှိပ်ပါ',
-    footer_text: 'ကိုယ့် ပေါ့ဖိုလီယို | ဖန်တီးသူ -'
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.getElementById('theme-toggle');
+  const savedTheme = localStorage.getItem('site_theme');
+  const initialTheme = savedTheme === 'light' ? 'light' : 'dark';
+
+  function setTheme(theme) {
+    const isLight = theme === 'light';
+    document.body.dataset.theme = theme;
+    if (themeToggle) {
+      themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} theme`);
+      themeToggle.title = `Switch to ${isLight ? 'dark' : 'light'} theme`;
+      themeToggle.innerHTML = `<i class="bi ${isLight ? 'bi-moon-fill' : 'bi-sun-fill'}" aria-hidden="true"></i>`;
+    }
+    localStorage.setItem('site_theme', theme);
   }
-};
 
-function setLanguage(lang) {
-  try {
-    const map = translations[lang] || translations.en;
-    // map text by IDs or data-i18n attributes
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (map[key]) el.textContent = map[key];
+  setTheme(initialTheme);
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      setTheme(document.body.dataset.theme === 'light' ? 'dark' : 'light');
     });
+  }
 
-    // special labeled nav items by id if present
-    const langLabel = document.getElementById('lang-label');
-    const langFlag = document.getElementById('lang-flag');
-    if (langLabel) langLabel.textContent = (lang === 'mm') ? 'မြန်မာ' : 'EN';
-    if (langFlag) {
-      // use bootstrap icons classes for flags/globe
-      if (lang === 'mm') {
-        langFlag.className = 'bi bi-flag-fill me-1';
+  const navLinks = [...document.querySelectorAll('.custom-navbar .nav-link[href^="#"]')];
+  const navSections = navLinks
+    .map((link) => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean)
+    .sort((a, b) => a.offsetTop - b.offsetTop);
+
+  function updateActiveNav() {
+    if (!navSections.length) return;
+
+    const activationLine = window.innerHeight * 0.3;
+    let activeSection = navSections[0];
+
+    for (const section of navSections) {
+      if (section.getBoundingClientRect().top <= activationLine) {
+        activeSection = section;
       } else {
-        langFlag.className = 'bi bi-globe2 me-1';
+        break;
       }
     }
 
-    localStorage.setItem('site_lang', lang);
-  } catch (e) {
-    console.error('i18n setLanguage error', e);
-  }
-}
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+      activeSection = navSections[navSections.length - 1];
+    }
 
-// toggle handler
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.getElementById('lang-toggle');
-  const current = localStorage.getItem('site_lang') || 'mm';
-  setLanguage(current);
-  // attach dropdown selection handlers
-  document.querySelectorAll('.lang-select').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const lang = btn.getAttribute('data-lang');
-      setLanguage(lang);
-      // close bootstrap dropdown if available
-      try {
-        const dd = bootstrap.Dropdown.getInstance(toggle) || new bootstrap.Dropdown(toggle);
-        dd.hide();
-      } catch (err) {
-        // ignore if bootstrap not present
+    navLinks.forEach((link) => {
+      const isActive = link.hash === `#${activeSection.id}`;
+      link.classList.toggle('active', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
       }
     });
+  }
+
+  let navUpdateScheduled = false;
+  function scheduleActiveNavUpdate() {
+    if (navUpdateScheduled) return;
+    navUpdateScheduled = true;
+    window.requestAnimationFrame(() => {
+      navUpdateScheduled = false;
+      updateActiveNav();
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener('scroll', scheduleActiveNavUpdate, { passive: true });
+  window.addEventListener('resize', scheduleActiveNavUpdate);
+  window.addEventListener('hashchange', scheduleActiveNavUpdate);
+
+  const projectFilters = document.querySelectorAll('[data-project-filter]');
+  const projects = document.querySelectorAll('.project-entry[data-category]');
+
+  projectFilters.forEach((filter) => {
+    filter.addEventListener('click', () => {
+      const selectedCategory = filter.dataset.projectFilter;
+
+      projectFilters.forEach((button) => {
+        const isSelected = button === filter;
+        button.classList.toggle('is-active', isSelected);
+        button.setAttribute('aria-pressed', String(isSelected));
+      });
+
+      projects.forEach((project) => {
+        project.hidden = selectedCategory !== 'all' && project.dataset.category !== selectedCategory;
+      });
+    });
   });
+
+  const blogFilters = document.querySelectorAll('[data-blog-filter]');
+  const blogPosts = document.querySelectorAll('.blog-card[data-blog-category]');
+
+  blogFilters.forEach((filter) => {
+    filter.addEventListener('click', () => {
+      const selectedCategory = filter.dataset.blogFilter;
+
+      blogFilters.forEach((button) => {
+        const isSelected = button === filter;
+        button.classList.toggle('is-active', isSelected);
+        button.setAttribute('aria-pressed', String(isSelected));
+      });
+
+      blogPosts.forEach((post) => {
+        post.hidden = selectedCategory !== 'all' && post.dataset.blogCategory !== selectedCategory;
+      });
+    });
+  });
+
 });
 
 // Diagnostic summary to help debug runtime issues — view in browser console
 (function runtimeDiagnostics() {
   try {
-    const langSelectCount = document.querySelectorAll('.lang-select').length;
-    const langToggle = !!document.getElementById('lang-toggle');
+    const projectCount = document.querySelectorAll('.project-entry').length;
+    const themeToggle = !!document.getElementById('theme-toggle');
     const progressBars = document.querySelectorAll('.progress-bar[data-target]').length;
     const revealCount = document.querySelectorAll('.reveal').length;
     const cvLink = !!document.getElementById('cv-download');
-    const siteLang = localStorage.getItem('site_lang') || '(not set)';
-    console.info('Diagnostics: langSelects=%d, langToggle=%s, progressBars=%d, revealItems=%d, cvLink=%s, site_lang=%s',
-      langSelectCount, langToggle, progressBars, revealCount, cvLink, siteLang);
+    const siteTheme = localStorage.getItem('site_theme') || 'dark';
+    console.info('Diagnostics: projects=%d, themeToggle=%s, progressBars=%d, revealItems=%d, cvLink=%s, site_theme=%s',
+      projectCount, themeToggle, progressBars, revealCount, cvLink, siteTheme);
   } catch (e) {
     console.error('Diagnostics failed', e);
   }

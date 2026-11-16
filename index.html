@@ -18,463 +18,347 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold reveal" href="#">Atlion</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home" data-i18n="nav_home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav_projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education" data-i18n="nav_education">Education</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#certificates"
-                            data-i18n="nav_certificates">Certificates</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#blog" data-i18n="nav_blog">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#video" data-i18n="nav_video">Video</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a></li>
-                </ul>
-                <ul class="navbar-nav flex-row reveal">
-                    <li class="nav-item">
-                        <a href="https://github.com/Atliol" class="nav-link px-2" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github fa-lg"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.linkedin.com/in/myo-kyaw-thu-159052309" class="nav-link px-2"
-                            target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin fa-lg"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.tiktok.com/@atlion?_r=1&_d=e34hi3ehabcd42&sec_uid=MS4wLjABAAAAAFH-xM-MqLoNqUSvfwdPh3fQdoXgctj3rkQl7P65OReEiNTnPmkeJHT1LFSAKkEV&share_author_id=6833045526914253829&sharer_language=en&source=h5_t&u_code=dciai0jfllefmh&timestamp=1753683052&user_id=6833045526914253829&sec_user_id=MS4wLjABAAAAAFH-xM-MqLoNqUSvfwdPh3fQdoXgctj3rkQl7P65OReEiNTnPmkeJHT1LFSAKkEV&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7529013119478908690&share_link_id=70eb49d5-93ad-46b6-8be7-40b95a06b242&share_app_id=1180&ugbiz_name=ACCOUNT&social_share_type=5&enable_checksum=1"
-                            class="nav-link px-2" target="_blank" aria-label="TikTok">
-                            <i class="fab fa-tiktok fa-lg"></i>
-                        </a>
-                    </li>
-                    <!-- Add more social icons/links as needed -->
-                </ul>
-                <!-- Language toggle (Bootstrap dropdown) -->
-                <ul class="navbar-nav ms-2">
-                    <li class="nav-item dropdown">
-                        <button id="lang-toggle" class="nav-link btn btn-link dropdown-toggle text-white"
-                            data-bs-toggle="dropdown" aria-expanded="false" aria-label="Change language">
-                            <span id="lang-label" class="ms-1">မြန်မာ</span>
-
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><button class="dropdown-item lang-select" data-lang="mm">မြန်မာ</button></li>
-                            <li><button class="dropdown-item lang-select" data-lang="en">English</button></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+    <nav class="navbar custom-navbar fixed-top" aria-label="Primary navigation">
+        <div class="container justify-content-center">
+            <ul class="navbar-nav flex-row">
+                <li class="nav-item"><a class="nav-link active" href="#home" data-i18n="nav_home"
+                        aria-current="location">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav_projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a></li>
+                <li class="nav-item nav-theme-item">
+                    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme"
+                        title="Switch to light theme">
+                        <i class="bi bi-sun-fill" aria-hidden="true"></i>
+                    </button>
+                </li>
+            </ul>
         </div>
     </nav>
 
     <!-- Home Section -->
-    <section id="home"
-        class="d-flex flex-column align-items-center justify-content-center text-center vh-100 position-relative">
-        <!-- animated gradient behind hero -->
+    <section id="home" class="position-relative">
         <div class="hero-gradient" aria-hidden="true"></div>
-        <img src="./image/myokyawthu.jpg" alt="Your Name" class="rounded-circle mb-4 profile-photo" width="150"
-            height="150">
-        <h1 class="display-4" data-i18n="name">Myo Kyaw Thu</h1>
-        <h3 class="typing-role mt-2"><span class="typing"
-                data-words='["Full-Stack(Mobile&Web) Developer","Junior Developer","Video Editor","YouTuber"]'></span></h3>
-        <div class="profile-details mt-3 reveal">
-            <p><strong data-i18n="education_label">Education:</strong> Final Year (Computer Science)</p>
-            <p><strong data-i18n="address_label">Address:</strong> QTR-yarthit,MJ4X+HH, Aungpan </p>
+        <div class="hero-layout container">
+            <div class="hero-copy reveal">
+                <p class="hero-eyebrow"><span aria-hidden="true">//</span> FULL-STACK DEVELOPER &amp; MOBILE CRAFTSMAN</p>
+                <h1>I am Myo Kyaw Thu,<br><span class="typing"
+                        data-words='["Software Engineer","Web Developer","Mobile Developer"]'>Software Engineer</span></h1>
+                <p class="hero-description">Passionate software engineer building cross-platform mobile apps, reactive web applications, and intelligent systems. Based in Myanmar, crafting global solutions.</p>
+                <div class="hero-actions">
+                    <a class="hero-button hero-button-primary" href="#projects">Explore Projects <i class="bi bi-arrow-down" aria-hidden="true"></i></a>
+                    <a class="hero-button" href="#contact">Get in touch</a>
+                    <a class="hero-icon-link" href="https://github.com/Atliol" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="bi bi-code" aria-hidden="true"></i>
+                    </a>
+                    <a class="hero-icon-link" href="https://www.linkedin.com/in/myo-kyaw-thu-159052309" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <figure class="hero-visual reveal">
+                <img class="hero-portrait" src="./image/myokyawthu.jpg" alt="Myo Kyaw Thu, software developer">
+                <figcaption class="hero-image-caption">
+                    <span><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Based in Myanmar</span>
+                    <span class="hero-image-name">Myo Kyaw Thu</span>
+                </figcaption>
+            </figure>
         </div>
-        <ul class="navbar-nav flex-row reveal">
-            <li class="nav-item">
-                <a href="https://www.youtube.com/@Atlionn" class="nav-link px-2" target="_blank" aria-label="youtube">
-                    <i class="fab fa-youtube fa-lg"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="https://github.com/Atliol" class="nav-link px-2" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github fa-lg"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="https://www.linkedin.com/in/myo-kyaw-thu-159052309" class="nav-link px-2" target="_blank"
-                    aria-label="LinkedIn">
-                    <i class="fab fa-linkedin fa-lg"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="https://www.tiktok.com/@atlion?_r=1&_d=e34hi3ehabcd42&sec_uid=MS4wLjABAAAAAFH-xM-MqLoNqUSvfwdPh3fQdoXgctj3rkQl7P65OReEiNTnPmkeJHT1LFSAKkEV&share_author_id=6833045526914253829&sharer_language=en&source=h5_t&u_code=dciai0jfllefmh&timestamp=1753683052&user_id=6833045526914253829&sec_user_id=MS4wLjABAAAAAFH-xM-MqLoNqUSvfwdPh3fQdoXgctj3rkQl7P65OReEiNTnPmkeJHT1LFSAKkEV&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7529013119478908690&share_link_id=70eb49d5-93ad-46b6-8be7-40b95a06b242&share_app_id=1180&ugbiz_name=ACCOUNT&social_share_type=5&enable_checksum=1"
-                    class="nav-link px-2" target="_blank" aria-label="TikTok">
-                    <i class="fab fa-tiktok fa-lg"></i>
-                </a>
-            </li>
-        </ul>
     </section>
     <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="mb-4" data-i18n="about_heading">About Me</h2>
-            <p style="text-align: justify;" class="about_paragraph" data-i18n="about_paragraph"> Hello,I am currently a Final-year student majoring
-                in Computer Science, and
-                I am excited about the
-                prospect of applying my skills in a junior developer role. This opportunity would allow me to further
-                develop my capabilities, contribute to meaningful projects, and collaborate within an innovative team
-                environment. With a strong foundation in problem-solving and a proven track record of successfully
-                delivering projects, I am eager to make valuable contributions as a junior developer.</p>
+    <section id="about" class="about-section py-5">
+        <div class="container about-layout">
+            <div class="about-copy">
+                <p class="section-kicker">ABOUT / DEVELOPER PROFILE</p>
+                <h2>Curiosity-driven developer, focused on useful software.</h2>
+                <p class="about-lead">Hello, I’m Myo Kyaw Thu — a Computer Science student and full-stack developer based in Myanmar.</p>
+                <p>I enjoy building cross-platform mobile applications and web experiences that solve practical problems. Through university and personal projects, I’ve developed experience across Flutter, React, web technologies, and backend systems.</p>
+                <p>I’m continuing to grow as a developer by learning, collaborating, and turning ideas into working products.</p>
+                <a id="cv-download" href="./image/myokyawthu.pdf" class="about-cv-link" target="_blank"
+                    rel="noopener noreferrer" aria-label="Download CV">
+                    <i class="bi bi-download" aria-hidden="true"></i> Download CV
+                </a>
+            </div>
+            <aside class="about-detail-panel" aria-label="Development focus">
+                <div class="about-detail-heading">
+                    <span>FOCUS AREAS</span>
+                    <i class="bi bi-grid-1x2" aria-hidden="true"></i>
+                </div>
+                <article class="about-focus-item">
+                    <span class="about-focus-icon"><i class="bi bi-phone" aria-hidden="true"></i></span>
+                    <div><h3>Mobile Applications</h3><p>Flutter · Dart</p></div>
+                    <i class="bi bi-arrow-up-right about-focus-arrow" aria-hidden="true"></i>
+                </article>
+                <article class="about-focus-item">
+                    <span class="about-focus-icon"><i class="bi bi-window" aria-hidden="true"></i></span>
+                    <div><h3>Web Experiences</h3><p>React · HTML · CSS · JavaScript</p></div>
+                    <i class="bi bi-arrow-up-right about-focus-arrow" aria-hidden="true"></i>
+                </article>
+                <article class="about-focus-item">
+                    <span class="about-focus-icon"><i class="bi bi-hdd-stack" aria-hidden="true"></i></span>
+                    <div><h3>Backend Systems</h3><p>C# · PHP · MySQL · Django</p></div>
+                    <i class="bi bi-arrow-up-right about-focus-arrow" aria-hidden="true"></i>
+                </article>
+                <div class="about-location">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    <span>Based in <strong>Aungpan, Myanmar</strong></span>
+                </div>
+            </aside>
         </div>
-        <!-- CV Download Button (under About) -->
-        <div class="container text-center my-3">
-            <a id="cv-download" href="./image/myokyawthu.pdf" class="btn btn-primary outline-light" target="_blank"
-                rel="noopener" aria-label="Download CV">
-                <i class="bi bi-download me-2" aria-hidden="true"></i>
-                <span id="cv-label" data-i18n="download_cv">Download CV</span>
-            </a>
-        </div>
-
     </section>
     <!-- Projects Section -->
     <section id="projects" class="py-5">
         <div class="container">
-            <h2 class="mb-4" data-i18n="projects_heading">Projects</h2>
-            <div class="row">
+            <div class="projects-heading">
+                <div>
+                    <p class="projects-kicker">SELECTED WORK</p>
+                    <h2 class="mb-2">Projects</h2>
+                    <p class="projects-subtitle">A selection of things I have built and learned from.</p>
+                </div>
+                <a class="projects-all-link" href="https://github.com/Atliol" target="_blank" rel="noopener noreferrer">
+                    View all on GitHub <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+            </div>
 
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 reveal">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Smart farm Assistant (Shwe Lel Yar App)</h5>
-                            <p class="card-text">This app provides farmers with agricultural techniques, pest
-                                management, and market news available both online and offline, aiming to enhance their
-                                farming knowledge and productivity through technology.</p>
-                            <img src="./image/shwelelyar.jpg" alt="project image" class="  img-fluid mb-3">
-                            <a href="https://atliol.github.io/Shwelelyar/" class="btn btn-primary mt-auto"
-                                target="_blank" data-i18n="open_demo">Open
-                                Demo</a>
+            <div class="project-filters" role="group" aria-label="Filter projects">
+                <button class="project-filter is-active" type="button" data-project-filter="all"
+                    aria-pressed="true">All</button>
+                <button class="project-filter" type="button" data-project-filter="mobile"
+                    aria-pressed="false">Mobile</button>
+                <button class="project-filter" type="button" data-project-filter="web"
+                    aria-pressed="false">Web</button>
+                <button class="project-filter" type="button" data-project-filter="backend"
+                    aria-pressed="false">Backend</button>
+            </div>
+
+            <div class="project-list">
+                <article class="project-entry reveal" data-category="mobile">
+                    <div class="project-copy">
+                        <div class="project-meta"><span>01</span><span class="project-meta-rule" aria-hidden="true"></span><span>MOBILE APP DEVELOPER</span></div>
+                        <h3>Smart Farm Assistant</h3>
+                        <p>An agriculture-focused mobile app for Myanmar farmers, with farming guides, weather, crop prices, calculators, medicine references, and an AI assistant. Designed with online and offline features.</p>
+                        <ul class="project-tags" aria-label="Technologies">
+                            <li>Flutter</li><li>Dart</li><li>Firebase</li><li>AI</li><li>Weather API</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://atliol.github.io/Shwelelyar/" target="_blank" rel="noopener noreferrer">Live Demo <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                            <span>University Project</span>
                         </div>
                     </div>
-                </div>
+                    <figure class="project-preview"><img src="./image/shwelelyar.jpg" alt="Smart Farm Assistant app preview"></figure>
+                </article>
 
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 reveal">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Meiktila liquor</h5>
-                            <p class="card-text">I want to practice improving html , css and Javascrip.<br> - HTML,CSS,Boostrap,Javascript<br>- Sec-yr Project</p>
-                            <img src="./image/meiktilal.png" alt="project image" class="  img-fluid mb-3">
-                            <a href="https://atliol.github.io/mei/" class="btn btn-primary mt-auto" target="_blank"
-                                data-i18n="open_demo">Open
-                                Demo</a>
-                        </div>
+                <article class="project-entry reveal" data-category="web">
+                    <div class="project-copy">
+                        <div class="project-meta"><span>02</span><span class="project-meta-rule" aria-hidden="true"></span><span>FRONT-END DEVELOPER</span></div>
+                        <h3>Meiktila Liquor</h3>
+                        <p>A second-year practice project exploring responsive web design and front-end development.</p>
+                        <ul class="project-tags" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>JavaScript</li></ul>
+                        <div class="project-links"><a href="https://atliol.github.io/mei/" target="_blank" rel="noopener noreferrer">Live Demo <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div>
                     </div>
-                </div>
+                    <figure class="project-preview"><img src="./image/meiktilal.png" alt="Meiktila Liquor website preview"></figure>
+                </article>
 
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 reveal">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Hostel Management System</h5>
-                            <p class="card-text">This Windows Application Form Project is designed as a desktop-based
-                                system to
-                                manage essential operations such as student details, visitor information, room types,
-                                and fee
-                                management.<br>-c#(.NET)<br>-Third-yr Project</p>
-                            <img src="./image/HMS.png" alt="project image" class="  img-fluid mb-3">
-                            <a href="https://www.tiktok.com/@atlion/video/7550720181258030343?is_from_webapp=1&sender_device=pc&web_id=7621389557233174036"
-                                class="btn btn-primary mt-auto" target="_blank">Open Tiktok Video</a>
-                        </div>
+                <article class="project-entry reveal" data-category="backend">
+                    <div class="project-copy">
+                        <div class="project-meta"><span>03</span><span class="project-meta-rule" aria-hidden="true"></span><span>DESKTOP APP DEVELOPER</span></div>
+                        <h3>Hostel Management System</h3>
+                        <p>A desktop application for managing student details, visitors, room types, and hostel fees.</p>
+                        <ul class="project-tags" aria-label="Technologies"><li>C#</li><li>.NET</li><li>Desktop</li></ul>
+                        <div class="project-links"><a href="https://www.tiktok.com/@atlion/video/7550720181258030343?is_from_webapp=1&sender_device=pc&web_id=7621389557233174036" target="_blank" rel="noopener noreferrer">Watch project video <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div>
                     </div>
-                </div>
+                    <figure class="project-preview"><img src="./image/HMS.png" alt="Hostel Management System preview"></figure>
+                </article>
 
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 reveal">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Human Resource Management System</h5>
-                            <p class="card-text">-PhP<br>-Third-yr Project</p>
-                            <img src="./image/pro3.png" alt="project image" class="  img-fluid mb-3">
-                            <a href="https://github.com/Atliol/Human-resources-management-system"
-                                class="btn btn-primary mt-auto" target="_blank">GitHub</a>
-                        </div>
+                <article class="project-entry reveal" data-category="backend">
+                    <div class="project-copy">
+                        <div class="project-meta"><span>04</span><span class="project-meta-rule" aria-hidden="true"></span><span>BACKEND DEVELOPER</span></div>
+                        <h3>Human Resource Management System</h3>
+                        <p>A third-year project focused on core human resource management workflows.</p>
+                        <ul class="project-tags" aria-label="Technologies"><li>PHP</li><li>MySQL</li></ul>
+                        <div class="project-links"><a href="https://github.com/Atliol/Human-resources-management-system" target="_blank" rel="noopener noreferrer">GitHub <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div>
                     </div>
-                </div>
+                    <figure class="project-preview"><img src="./image/pro3.png" alt="Human Resource Management System preview"></figure>
+                </article>
 
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 reveal">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Pranking a Friend</h5>
-                            <p class="card-text">This is done to prank friends and to improve HTML, CSS, and
-                                JavaScript.
-                            </p>
-                            <img src="./image/pkf.png" alt="project image" class="  img-fluid mb-3">
-                            <a href="https://atliol.github.io/friendcc/" class="btn btn-primary mt-auto" target="_blank"
-                                data-i18n="open_demo">Open Demo</a>
-                        </div>
+                <article class="project-entry reveal" data-category="web">
+                    <div class="project-copy">
+                        <div class="project-meta"><span>05</span><span class="project-meta-rule" aria-hidden="true"></span><span>FRONT-END DEVELOPER</span></div>
+                        <h3>Pranking a Friend</h3>
+                        <p>A playful project made to surprise friends while practicing front-end development.</p>
+                        <ul class="project-tags" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                        <div class="project-links"><a href="https://atliol.github.io/friendcc/" target="_blank" rel="noopener noreferrer">Live Demo <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 reveal">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">My Family</h5>
-                            <p class="card-text">I want to practice improving html , css and Javascrip.</p>
-                            <img src="./image/myfamily.png" alt="project image" class="  img-fluid mb-3">
-                            <a href="https://atliol.github.io/family/" class="btn btn-primary mt-auto" target="_blank"
-                                data-i18n="open_demo">Open demo</a>
-                        </div>
+                    <figure class="project-preview"><img src="./image/pkf.png" alt="Pranking a Friend website preview"></figure>
+                </article>
+
+                <article class="project-entry reveal" data-category="web">
+                    <div class="project-copy">
+                        <div class="project-meta"><span>06</span><span class="project-meta-rule" aria-hidden="true"></span><span>FRONT-END DEVELOPER</span></div>
+                        <h3>My Family</h3>
+                        <p>A small front-end practice project built to strengthen web development fundamentals.</p>
+                        <ul class="project-tags" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                        <div class="project-links"><a href="https://atliol.github.io/family/" target="_blank" rel="noopener noreferrer">Live Demo <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div>
                     </div>
-                </div>
+                    <figure class="project-preview"><img src="./image/myfamily.png" alt="My Family website preview"></figure>
+                </article>
 
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 reveal">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">PreSchool For AR(CV-project)</h5>
-                            <p class="card-text">Develop a real-time
-                                Augmented Reality (AR)
-                                system to detect multiple
-                                target images</p>
-                            <img src="./image/computervision.png" alt="project image" class="  img-fluid mb-3">
-                            <a href="https://www.tiktok.com/@atlion/video/7610380561122692370?is_from_webapp=1&sender_device=pc&web_id=7621389557233174036"
-                                class="btn btn-primary mt-auto" target="_blank">Open tiktok Video</a>
-                        </div>
+                <article class="project-entry reveal" data-category="mobile">
+                    <div class="project-copy">
+                        <div class="project-meta"><span>07</span><span class="project-meta-rule" aria-hidden="true"></span><span>AR &amp; COMPUTER VISION</span></div>
+                        <h3>PreSchool for AR</h3>
+                        <p>A computer vision project that detects multiple target images in real time using augmented reality.</p>
+                        <ul class="project-tags" aria-label="Technologies"><li>Computer Vision</li><li>Augmented Reality</li></ul>
+                        <div class="project-links"><a href="https://www.tiktok.com/@atlion/video/7610380561122692370?is_from_webapp=1&sender_device=pc&web_id=7621389557233174036" target="_blank" rel="noopener noreferrer">Watch project video <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div>
                     </div>
-                </div>
+                    <figure class="project-preview"><img src="./image/computervision.png" alt="PreSchool AR project preview"></figure>
+                </article>
 
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 reveal">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">RIG-Scholarship(Django)</h5>
-                            <p class="card-text">-POS System</p>
-
-                            <img src="./image/RiG_django.png.png" alt="project image" class="  img-fluid mb-3">
-                            <a href="https://github.com/Atliol/POSprojectforRIG.git"
-                                class="btn btn-primary mt-auto" target="_blank">Open GitHub </a>
-                        </div>
+                <article class="project-entry reveal" data-category="backend">
+                    <div class="project-copy">
+                        <div class="project-meta"><span>08</span><span class="project-meta-rule" aria-hidden="true"></span><span>BACKEND DEVELOPER</span></div>
+                        <h3>RIG Scholarship POS</h3>
+                        <p>A point-of-sale system developed during the Realistic Infotech Group scholarship program.</p>
+                        <ul class="project-tags" aria-label="Technologies"><li>Django</li><li>Python</li><li>POS</li></ul>
+                        <div class="project-links"><a href="https://github.com/Atliol/POSprojectforRIG.git" target="_blank" rel="noopener noreferrer">GitHub <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div>
                     </div>
-                </div>
-                <form class="contact-form">
-
-                    <button onclick="window.open('https://github.com/Atliol')" data-i18n="more_projects">More
-                        Project</button>
-                </form>
-                <!-- Repeat this block for more projects -->
+                    <figure class="project-preview"><img src="./image/RiG_django.png.png" alt="RIG Scholarship POS preview"></figure>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-5">
-        <div class="container">
-            <h2 id="education-heading" class="mb-4" data-i18n="education_heading">Education</h2>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <strong>Higher Education School</strong> - B.E.H.S(6)LASHIO,Myanmar(2019-2022)
-                </li>
-            </ul><br>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <strong>Bachelor of Computer Science</strong> - University Of Computer Studies (Lashio)(First
-                    Year)(2022-2023)
-                </li>
-            </ul><br>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <strong>Bachelor of Computer Science</strong> - University Of Computer Studies (Meiktila)(First
-                    Year-sec sem)(2023-2024)
-                </li>
-            </ul><br>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <strong>Bachelor of Computer Science</strong> - University Of Computer Studies
-                    (Taunggyi)(Second-Year-sec Sem)(2023-2024)
-                </li>
-            </ul><br>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <strong>Bachelor of Computer Science</strong> - University Of Computer Studies (Meiktila)(2024-2027)
-                </li>
-            
-                </ul><br>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <strong>Django Scholarship </strong> - Realistic Infotech Group(3 Months)
-                </li>
-                </ul><br>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <strong>Software Development Fundamentals Course 1</strong> - Ma Ei Mon (KBZ Bank)(3 Months)
-                </li>
-                <!-- Add more education items as needed -->
-            </ul>
-        </div>
-    </section>
+    <section id="education" class="journey-section py-5" aria-labelledby="education-heading">
+        <div class="container journey-layout">
+            <div class="journey-panel">
+                <div class="journey-panel-heading">
+                    <div>
+                        <p class="section-kicker">01 / EDUCATION &amp; JOURNEY</p>
+                        <h2 id="education-heading">Education &amp; Background</h2>
+                    </div>
+                    <span class="section-note">ACADEMIC JOURNEY</span>
+                </div>
 
-    <!-- Certificates Section -->
-    <section id="certificates" class="py-5">
-        <div class="container">
-            <h2 id="certification_h2" class="mb-4" data-i18n="certificates_heading">Certificates</h2>
-             <p  class="mb-1" data-i18n="certificate_story_prompt">I participated in a project competition organized
-                    by the University of Computer Studies, Meiktila, where I served as the team leader. Through
-                    developing a mobile application, I not only gained practical technical experience but also learned
-                    valuable skills in teamwork, leadership, and problem-solving.
-                </p>
-           <br>
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-9 col-lg-7">
-                    <figure class="certificate-item">
-                        <img src="./image/IMG_20261005_200921_546_1791207573412edit.jpg" alt="Certificate 1"
-                            class="certificate-image"
-                            onerror="this.hidden = true; this.nextElementSibling.hidden = false">
-                        <figcaption class="certificate-placeholder" data-i18n="certificates_empty" hidden>
-                            Add certificate-1.jpg to the image folder.
-                        </figcaption>
+                <div class="journey-cards">
+                    <article class="journey-card">
+                        <div class="journey-card-icon"><i class="bi bi-mortarboard" aria-hidden="true"></i></div>
+                        <div class="journey-card-content">
+                            <div class="journey-card-heading">
+                                <h3>Bachelor of Computer Science</h3>
+                                <span class="journey-date">2024 – 2027</span>
+                            </div>
+                            <p class="journey-institution">University of Computer Studies (Meiktila)</p>
+                            <p class="journey-detail">Earlier studies at UCS Lashio (2022–2023), UCS Meiktila and UCS Taunggyi (2023–2024).</p>
+                            <ul class="journey-tags"><li>Computer Science</li><li>University Studies</li></ul>
+                        </div>
+                    </article>
+
+                    <article class="journey-card">
+                        <div class="journey-card-icon"><i class="bi bi-code-square" aria-hidden="true"></i></div>
+                        <div class="journey-card-content">
+                            <div class="journey-card-heading">
+                                <h3>Django Scholarship</h3>
+                                <span class="journey-date">3 months</span>
+                            </div>
+                            <p class="journey-institution">Realistic Infotech Group</p>
+                            <ul class="journey-tags"><li>Django</li><li>Scholarship</li></ul>
+                        </div>
+                    </article>
+
+                    <article class="journey-card">
+                        <div class="journey-card-icon"><i class="bi bi-journal-code" aria-hidden="true"></i></div>
+                        <div class="journey-card-content">
+                            <div class="journey-card-heading">
+                                <h3>Software Development Fundamentals Course 1</h3>
+                                <span class="journey-date">3 months</span>
+                            </div>
+                            <p class="journey-institution">Ma Ei Mon (KBZ Bank)</p>
+                            <ul class="journey-tags"><li>Software Development</li><li>Course</li></ul>
+                        </div>
+                    </article>
+
+                    <article class="journey-card">
+                        <div class="journey-card-icon"><i class="bi bi-mortarboard" aria-hidden="true"></i></div>
+                        <div class="journey-card-content">
+                            <div class="journey-card-heading">
+                                <h3>Higher Education School</h3>
+                                <span class="journey-date">2019 – 2022</span>
+                            </div>
+                            <p class="journey-institution">B.E.H.S (6), Lashio</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div id="certificates" class="journey-panel certificate-panel">
+                <div class="journey-panel-heading">
+                    <div>
+                        <p class="section-kicker">02 / CERTIFICATIONS</p>
+                        <h2>Certificates &amp; Achievements</h2>
+                    </div>
+                    <span class="section-note">HONORS &amp; AWARDS</span>
+                </div>
+
+                <article class="certificate-card">
+                    <figure class="certificate-card-image">
+                        <img src="./image/IMG_20261005_200921_546_1791207573412edit.jpg"
+                            alt="Certificate of Appreciation for the Smart Farm Assistant App at the University Project Competition">
                     </figure>
-                </div>
+                    <div class="certificate-card-heading">
+                        <h3>University Project Competition</h3>
+                        <time datetime="2026-08-20">Aug 2026</time>
+                    </div>
+                    <p class="certificate-card-subtitle">Certificate of Appreciation · University of Computer Studies (Meiktila)</p>
+                    <p class="certificate-card-detail">Recognized for participation and contribution to the Smart Farm Assistant App (Shwe Lel Yar App).</p>
+                    <a href="#projects" class="certificate-project-link">Explore the project <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                </article>
             </div>
-
         </div>
     </section>
 
-    <!-- Skills Progress Bar Section -->
-    <!-- Skills Section (Modern Accordion/Grid Alternative UI) -->
-    <section id="skills" class="py-5">
+    <section id="skills" class="skills-section py-5">
         <div class="container">
-            <h2 id="skill_h2" class="mb-4 text-md-start" data-i18n="skills_heading">Skills</h2>
-
-            <div class="row g-4">
-                <!-- Frontend -->
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-lg overflow-hidden reveal"
-                        style="background: linear-gradient(145deg, #1e1e30, #131321);">
-                        <div class="card-body p-4 d-flex flex-column">
-                            <div
-                                class="d-flex align-items-center mb-4 pb-2 border-bottom border-secondary border-opacity-25">
-                                <div class="p-3 rounded-3 me-3"
-                                    style="background: rgba(0, 180, 216, 0.15); color: #00b4d8;">
-                                    <i class="bi bi-window-stack fs-3"></i>
-                                </div>
-                                <h4 class="card-title mb-0 fw-bold" style="color: #00b4d8;">Frontend</h4>
-                            </div>
-                            <div class="d-flex flex-column gap-2 mt-auto">
-                                <div class="d-flex align-items-center justify-content-between p-2 rounded-3"
-                                    style="background: rgba(255, 255, 255, 0.04);">
-                                    <span class="small fw-semibold"><i
-                                            class="bi bi-filetype-html text-danger me-2 fs-5"></i>HTML5</span>
-                                    <span
-                                        class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-25">Advanced</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between p-2 rounded-3"
-                                    style="background: rgba(255, 255, 255, 0.04);">
-                                    <span class="small fw-semibold"><i
-                                            class="bi bi-filetype-jsx text-info me-2 fs-5"></i>React</span>
-                                    <span
-                                        class="badge bg-info bg-opacity-25 text-info border border-info border-opacity-25">Advanced</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between p-2 rounded-3"
-                                    style="background: rgba(255, 255, 255, 0.04);">
-                                    <span class="small fw-semibold"><i
-                                            class="bi bi-filetype-js text-warning me-2 fs-5"></i>JavaScript</span>
-                                    <span
-                                        class="badge bg-warning bg-opacity-25 text-warning border border-warning border-opacity-25">Intermediate</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between p-2 rounded-3"
-                                    style="background: rgba(255, 255, 255, 0.04);">
-                                    <span class="small fw-semibold"><i
-                                            class="bi bi-code-slash text-primary me-2 fs-5"></i>flutter</span>
-                                    <span
-                                        class="badge bg-primary bg-opacity-25 text-primary border border-primary border-opacity-25">Intermediate</span>
-                                </div>
-                            </div>
-                        </div>
+            <p class="section-kicker">02 / ARSENAL &amp; CAPABILITIES</p>
+            <h2 id="skill_h2" class="skills-title">Tech Stack Matrix</h2>
+            <div class="skills-grid">
+                <article class="skill-matrix-card">
+                    <h3><i class="bi bi-phone" aria-hidden="true"></i> Mobile Systems</h3>
+                    <div class="skill-matrix-list">
+                        <div class="skill-matrix-row"><span>Flutter</span><span class="skill-level level-intermediate">Intermediate</span></div>
+                        <div class="skill-matrix-row"><span>Dart</span><span class="skill-level level-project">Project use</span></div>
+                        <div class="skill-matrix-row"><span>Cross-platform apps</span><span class="skill-level level-project">Project use</span></div>
                     </div>
-                </div>
-
-                <!-- Backend -->
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-lg overflow-hidden reveal"
-                        style="background: linear-gradient(145deg, #1e1e30, #131321);">
-                        <div class="card-body p-4 d-flex flex-column">
-                            <div
-                                class="d-flex align-items-center mb-4 pb-2 border-bottom border-secondary border-opacity-25">
-                                <div class="p-3 rounded-3 me-3"
-                                    style="background: rgba(46, 204, 113, 0.15); color: #2ecc71;">
-                                    <i class="bi bi-server fs-3"></i>
-                                </div>
-                                <h4 class="card-title mb-0 fw-bold" style="color: #2ecc71;">Backend</h4>
-                            </div>
-                            <div class="d-flex flex-column gap-2 mt-auto">
-                                <div class="d-flex align-items-center justify-content-between p-2 rounded-3"
-                                    style="background: rgba(255, 255, 255, 0.04);">
-                                    <span class="small fw-semibold"><i
-                                            class="bi bi-code-slash text-primary me-2 fs-5"></i>C#</span>
-                                    <span
-                                        class="badge bg-primary bg-opacity-25 text-primary border border-primary border-opacity-25">Intermediate</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between p-2 rounded-3"
-                                    style="background: rgba(255, 255, 255, 0.04);">
-                                    <span class="small fw-semibold"><i
-                                            class="bi bi-database text-info me-2 fs-5"></i>MySQL</span>
-                                    <span
-                                        class="badge bg-info bg-opacity-25 text-info border border-info border-opacity-25">Intermediate</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between p-2 rounded-3"
-                                    style="background: rgba(255, 255, 255, 0.04);">
-                                    <span class="small fw-semibold"><i
-                                            class="bi bi-filetype-py text-danger me-2 fs-5"></i>Python</span>
-                                    <span
-                                        class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-25">Basic</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between p-2 rounded-3"
-                                    style="background: rgba(255, 255, 255, 0.04);">
-                                    <span class="small fw-semibold"><i
-                                            class="bi bi-filetype-php text-danger me-2 fs-5"></i>PHP</span>
-                                    <span
-                                        class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-25">Intermediate</span>
-                                </div>
-                            </div>
-                        </div>
+                </article>
+                <article class="skill-matrix-card">
+                    <h3><i class="bi bi-code" aria-hidden="true"></i> Web &amp; Frontend</h3>
+                    <div class="skill-matrix-list">
+                        <div class="skill-matrix-row"><span>HTML5</span><span class="skill-level level-advanced">Advanced</span></div>
+                        <div class="skill-matrix-row"><span>React</span><span class="skill-level level-advanced">Advanced</span></div>
+                        <div class="skill-matrix-row"><span>JavaScript</span><span class="skill-level level-intermediate">Intermediate</span></div>
+                        <div class="skill-matrix-row"><span>CSS &amp; Bootstrap</span><span class="skill-level level-project">Project use</span></div>
                     </div>
-                </div>
-
-                <!-- DevOps -->
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-lg overflow-hidden reveal"
-                        style="background: linear-gradient(145deg, #1e1e30, #131321);">
-                        <div class="card-body p-4 d-flex flex-column">
-                            <div
-                                class="d-flex align-items-center mb-4 pb-2 border-bottom border-secondary border-opacity-25">
-                                <div class="p-3 rounded-3 me-3"
-                                    style="background: rgba(241, 196, 15, 0.15); color: #f1c40f;">
-                                    <i class="bi bi-gear-wide-connected fs-3"></i>
-                                </div>
-                                <h4 class="card-title mb-0 fw-bold" style="color: #f1c40f;">DevOps</h4>
-                            </div>
-                            <div class="d-flex flex-column gap-2 mt-auto">
-                                <div class="d-flex align-items-center justify-content-between p-2 rounded-3"
-                                    style="background: rgba(255, 255, 255, 0.04);">
-                                    <span class="small fw-semibold"><i class="bi bi-github text-light me-2 fs-5"></i>Git
-                                        & GitHub</span>
-                                    <span
-                                        class="badge bg-light bg-opacity-25 text-light border border-light border-opacity-25">Intermediate</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between p-2 rounded-3"
-                                    style="background: rgba(255, 255, 255, 0.04);">
-                                    <span class="small fw-semibold"><i
-                                            class="bi bi-terminal-fill text-success me-2 fs-5"></i>Linux / Bash</span>
-                                    <span
-                                        class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-25">Basic</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between p-2 rounded-3"
-                                    style="background: rgba(255, 255, 255, 0.04);">
-                                    <span class="small fw-semibold"><i
-                                            class="bi bi-box-seam text-info me-2 fs-5"></i>Docker</span>
-                                    <span
-                                        class="badge bg-info bg-opacity-25 text-info border border-info border-opacity-25">Basic</span>
-                                </div>
-                            </div>
-                        </div>
+                </article>
+                <article class="skill-matrix-card">
+                    <h3><i class="bi bi-cloud" aria-hidden="true"></i> Backend &amp; Cloud</h3>
+                    <div class="skill-matrix-list">
+                        <div class="skill-matrix-row"><span>C#</span><span class="skill-level level-intermediate">Intermediate</span></div>
+                        <div class="skill-matrix-row"><span>PHP</span><span class="skill-level level-intermediate">Intermediate</span></div>
+                        <div class="skill-matrix-row"><span>MySQL</span><span class="skill-level level-intermediate">Intermediate</span></div>
+                        <div class="skill-matrix-row"><span>Python</span><span class="skill-level level-basic">Basic</span></div>
+                        <div class="skill-matrix-row"><span>Django &amp; Firebase</span><span class="skill-level level-project">Project use</span></div>
                     </div>
-                </div>
+                </article>
+                <article class="skill-matrix-card">
+                    <h3><i class="bi bi-cpu" aria-hidden="true"></i> AI &amp; Tooling</h3>
+                    <div class="skill-matrix-list">
+                        <div class="skill-matrix-row"><span>Git &amp; GitHub</span><span class="skill-level level-intermediate">Intermediate</span></div>
+                        <div class="skill-matrix-row"><span>Linux / Bash</span><span class="skill-level level-basic">Basic</span></div>
+                        <div class="skill-matrix-row"><span>Docker</span><span class="skill-level level-basic">Basic</span></div>
+                        <div class="skill-matrix-row"><span>AI &amp; Computer Vision</span><span class="skill-level level-project">Project use</span></div>
+                    </div>
+                </article>
             </div>
-
         </div>
     </section>
 
@@ -483,58 +367,152 @@
     <!-- Blog Section -->
     <section id="blog" class="py-5">
         <div class="container">
-            <p data-i18n="blog_p">Click the button below to go to the blog</p>
+            <div class="blog-heading">
+                <div>
+                    <p class="section-kicker">03 / NOTES &amp; ARTICLES</p>
+                    <h2>Articles &amp; Video Tutorials</h2>
+                    <p class="blog-intro">A few posts and videos from my teaching, blogging, and gaming journey.</p>
+                </div>
+                <div class="blog-filters" role="group" aria-label="Filter blog posts">
+                    <button class="blog-filter is-active" type="button" data-blog-filter="all"
+                        aria-pressed="true">All Posts</button>
+                    <button class="blog-filter" type="button" data-blog-filter="article"
+                        aria-pressed="false">Articles</button>
+                    <button class="blog-filter" type="button" data-blog-filter="video"
+                        aria-pressed="false">Video Tutorials</button>
+                </div>
+            </div>
 
-        </div>
-        <div class="container text-center my-3">
-            <a id="cv-download" href="./blog.html" class="btn btn-primary outline-light" target="_blank" rel="noopener"
-                aria-label="Download CV">
+            <div class="blog-grid">
+                <article class="blog-card blog-card-featured reveal" data-blog-category="article">
+                    <a class="blog-card-image" href="https://lovely096868.blogspot.com/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="./image/blogspo.png" alt="Blogger website used to share free training courses">
+                        <span class="blog-image-label"><i class="bi bi-stars" aria-hidden="true"></i> Featured Article</span>
+                    </a>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta"><span>Education</span><time datetime="2021-11-08">Nov 8, 2021</time><span>Beginner</span></div>
+                        <h3>Sharing Free Training Courses with Blogger</h3>
+                        <p>I used a Blogger website to offer free training courses and make learning resources easier to access.</p>
+                        <ul class="blog-tags"><li>Blogger</li><li>Free Education</li><li>Teaching</li></ul>
+                        <div class="blog-card-footer">
+                            <a href="https://lovely096868.blogspot.com/" target="_blank" rel="noopener noreferrer">Read Full Article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                            <span>By Myo Kyaw Thu</span>
+                        </div>
+                    </div>
+                </article>
 
-                <span id="cv-label" data-i18n="blog_heading">open Blog</span>
-            </a>
+                <div class="blog-side-list">
+                    <article class="blog-card blog-card-compact reveal" data-blog-category="video">
+                        <a class="blog-card-image" href="https://www.facebook.com/share/v/1A81TqBoMi/"
+                            target="_blank" rel="noopener noreferrer">
+                            <img src="./image/myanmarobb.jpg" alt="Bus Simulator Indonesia tutorial post">
+                            <span class="blog-image-label"><i class="bi bi-play-circle-fill" aria-hidden="true"></i> Video Tutorial</span>
+                        </a>
+                        <div class="blog-card-content">
+                            <div class="blog-card-meta"><span>Mobile Gaming</span><time datetime="2022-07-04">Jul 4, 2022</time></div>
+                            <h3>Bus Simulator Indonesia: OBB Mod</h3>
+                            <p>A game-related post with the OBB mod and download information.</p>
+                            <div class="blog-card-footer">
+                                <a href="https://www.facebook.com/share/v/1A81TqBoMi/" target="_blank" rel="noopener noreferrer">Watch Tutorial <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                                <span>Facebook</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card blog-card-compact reveal" data-blog-category="video">
+                        <a class="blog-card-image" href="https://youtu.be/Cf8bJ0WL-go" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="./image/gamerev.jpg" alt="Game review and gameplay video">
+                            <span class="blog-image-label"><i class="bi bi-play-circle-fill" aria-hidden="true"></i> Video</span>
+                        </a>
+                        <div class="blog-card-content">
+                            <div class="blog-card-meta"><span>Gaming</span><time datetime="2024-11-11">Nov 11, 2024</time></div>
+                            <h3>Game Review &amp; Gameplay</h3>
+                            <p>A game review and gameplay video from my YouTube channel.</p>
+                            <div class="blog-card-footer">
+                                <a href="https://youtu.be/Cf8bJ0WL-go" target="_blank" rel="noopener noreferrer">Watch Video <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                                <span>YouTube</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="blog-more-link">
+                <a href="./blog.html">Browse the blog page <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
         </div>
     </section>
 
 
     <!-- Video Section -->
 
-    <section id="video" class="py-5">
-        <div class="vid">
-            <div class="container ">
-                <h2 class="mb-4" data-i18n="video_heading">video editing skill</h2>
-
+    <section id="video" class="video-showcase-section py-5">
+        <div class="container">
+            <div class="video-showcase-heading">
+                <div>
+                    <p class="video-showcase-kicker">03 / CREATIVE WORK</p>
+                    <h2 class="video-showcase-title" data-i18n="video_heading">Video Editing</h2>
+                    <p class="video-showcase-description">A selection of edits, school stories, and travel moments.</p>
+                </div>
+                <p class="video-showcase-count"><strong>04</strong><span>FEATURED VIDEOS</span></p>
             </div>
             <div class="video-container">
-                <div class="video-item">
-                    <video controls>
-                        <source src="./video/videoedit.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p class="video-caption">Video Edit p1</p>
-                </div>
-                <div class="video-item">
-                    <video controls>
-                        <source src="./video/school.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p class="video-caption">School mini-vlog</p>
-                </div>
-                <div class="video-item">
-                    <video controls>
-                        <source src="./video/schoolpre.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p class="video-caption">School presentation</p>
-                </div>
-                <div class="video-item">
-                    <video controls>
-                        <source src="./video/vlogmp4.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p class="video-caption">travel mini-vlog</p>
-                </div>
-
+                <article class="video-item">
+                    <div class="video-frame">
+                        <video controls preload="metadata" playsinline aria-label="Video edit sample">
+                            <source src="./video/videoedit.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <span class="video-index" aria-hidden="true">01</span>
+                    </div>
+                    <div class="video-item-info">
+                        <p class="video-caption">Video Edit p1</p>
+                        <span class="video-item-type">EDIT</span>
+                    </div>
+                </article>
+                <article class="video-item">
+                    <div class="video-frame">
+                        <video controls preload="metadata" playsinline aria-label="School mini-vlog">
+                            <source src="./video/school.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <span class="video-index" aria-hidden="true">02</span>
+                    </div>
+                    <div class="video-item-info">
+                        <p class="video-caption">School mini-vlog</p>
+                        <span class="video-item-type">VLOG</span>
+                    </div>
+                </article>
+                <article class="video-item">
+                    <div class="video-frame">
+                        <video controls preload="metadata" playsinline aria-label="School presentation">
+                            <source src="./video/schoolpre.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <span class="video-index" aria-hidden="true">03</span>
+                    </div>
+                    <div class="video-item-info">
+                        <p class="video-caption">School presentation</p>
+                        <span class="video-item-type">PRESENTATION</span>
+                    </div>
+                </article>
+                <article class="video-item">
+                    <div class="video-frame">
+                        <video controls preload="metadata" playsinline aria-label="Travel mini-vlog">
+                            <source src="./video/vlogmp4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <span class="video-index" aria-hidden="true">04</span>
+                    </div>
+                    <div class="video-item-info">
+                        <p class="video-caption">Travel mini-vlog</p>
+                        <span class="video-item-type">TRAVEL</span>
+                    </div>
+                </article>
             </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
@@ -542,13 +520,29 @@
         <div class="container text-center">
             <h1 data-i18n="contact_heading">Contact </h1>
 
-            <form class="contact-form">
-                <p data-i18n="contact_paragraph">Click the button below to provide contact information </p>
-                <button
-                    onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSclKfYENzIw09r3N-ivIFwJbVDRCq8F1yZTyLC4JunbK5FScg/viewform?usp=dialog')"
-                    data-i18n="contact_button">Click
-                    Here</button>
-            </form>
+            <p>Connect with me on social media</p>
+            <nav class="contact-social-links" aria-label="Social media links">
+                <a class="contact-social-link" href="https://www.facebook.com/myokyawthu03" target="_blank"
+                    rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <a class="contact-social-link" href="https://www.tiktok.com/@atlion" target="_blank"
+                    rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+                    <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                </a>
+                <a class="contact-social-link" href="https://github.com/Atliol" target="_blank"
+                    rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a class="contact-social-link" href="https://www.linkedin.com/in/myo-kyaw-thu-159052309"
+                    target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a class="contact-social-link" href="https://t.me/Atlion01" target="_blank"
+                    rel="noopener noreferrer" aria-label="Telegram" title="Telegram">
+                    <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+                </a>
+            </nav>
         </div>
     </section>
 
